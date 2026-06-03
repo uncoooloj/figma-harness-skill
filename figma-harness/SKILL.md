@@ -1,6 +1,6 @@
 ---
 name: figma-harness
-description: Orchestrate production UI implementation from one or more Figma links, screenshots, or design-file references. Use when Codex must inspect Figma sources, classify pages/frames/prototypes, resolve ambiguity before coding, infer tokens/components/flows, coordinate web/mobile/cross-platform implementation, and verify rendered UI against the design. Trigger for Figma-to-code, design-to-code, convert Figma to React/Next/Expo/SwiftUI, implement these Figma screens, build from multiple Figma links, or turn a messy Figma file into production UI.
+description: Orchestrate production UI implementation from one or more Figma links, screenshots, or design-file references. Use when an AI coding agent must inspect Figma sources, classify pages/frames/prototypes, resolve ambiguity before coding, infer tokens/components/flows, coordinate web/mobile/cross-platform implementation, and verify rendered UI against the design. Trigger for Figma-to-code, design-to-code, convert Figma to React/Next/Expo/SwiftUI, implement these Figma screens, build from multiple Figma links, or turn a messy Figma file into production UI.
 ---
 
 # Figma Harness
@@ -9,7 +9,24 @@ description: Orchestrate production UI implementation from one or more Figma lin
 
 Act as a careful product/design engineer before acting as a coding agent. Figma is not a deterministic code spec: files can contain stale screens, duplicate flows, detached instances, partial mobile variants, implicit business logic, and conflicting design-system signals. First inventory and clarify the source of truth; then implement from a confirmed design model.
 
-This skill is a harness. It coordinates design intake, ambiguity resolution, design-system inference, implementation, and review. It does not replace lower-level Figma, frontend, mobile, or browser-testing skills. When those skills are available and relevant, load and follow them.
+This skill is a portable harness. It coordinates design intake, ambiguity resolution, design-system inference, implementation, and review for any capable coding agent. It does not replace lower-level Figma, frontend, mobile, or browser-testing skills/tools. When those capabilities are available and relevant, load and follow them as platform adapters.
+
+## Portability Contract
+
+Use the harness as model- and platform-neutral operating instructions. The package is installable as a Codex skill, but the core workflow should also work in Claude Code, Cursor, Gemini CLI, OpenAI Codex CLI, custom MCP harnesses, or any agentic environment with equivalent file, Figma, browser, and code-editing tools.
+
+- Treat platform-specific tool names as adapters, not requirements.
+- Preserve the source inventory, ambiguity gate, design model, implementation order, and review gate even when a platform lacks one specific tool.
+- If the agent has Figma MCP/API access, inspect designs directly.
+- If the agent lacks Figma MCP/API access, ask for frame exports, screenshots, prototype links, design-system docs, or user-selected canonical frames.
+- If the agent can run parallel workers, keep analysis writes scoped to docs/tmp artifacts and production writes scoped to the implementation role.
+- If the agent cannot run parallel workers, simulate the same roles sequentially.
+
+Adapter examples:
+
+- Codex: install this folder as `figma-harness`; use `agents/openai.yaml` for interface metadata; when calling `use_figma`, load `figma-use` first.
+- Claude Code or other coding agents: paste or reference `SKILL.md` as the project instruction/harness; map Figma/browser/test operations to the platform's available tools.
+- Custom agent harnesses: implement the workflow states as gates in the orchestrator and persist the same docs/tmp artifacts.
 
 ## Operating Mode
 
@@ -31,7 +48,7 @@ In either mode, avoid vague question loops. Ask the smallest structured batch th
 - Do not use image generation, concept redesign, or taste-based reinterpretation to override supplied Figma sources unless the user explicitly asks for a redesign.
 - Keep design-analysis artifacts scoped to `docs/figma-harness/` and `.tmp/figma-harness/`.
 - Analysis agents may write only scoped docs/tmp artifacts. Only the implementation agent may write production application code.
-- If using Figma plugin/API tools, load the required Figma skill first. In Codex, `figma-use` is mandatory before `use_figma`.
+- If using platform-specific Figma plugin/API tools, load any required tool-specific adapter instructions first.
 
 ## Workflow
 
