@@ -134,6 +134,7 @@ Ask structured questions:
 ```text
 Category:
 Decision:
+Visual evidence:
 Options:
 Recommended:
 Why it matters:
@@ -147,7 +148,7 @@ Update:
 
 Proceed only when blocking/high ambiguity is resolved, or when the user explicitly authorizes assumptions.
 
-For examples of good questions and safe assumptions, load `references/question-bank.md` and `references/assumption-policy.md`.
+For examples of good questions and safe assumptions, load `references/question-bank.md` and `references/assumption-policy.md`. When a question depends on a visual detail, return a screenshot, crop, or annotated callout when the platform can safely capture one; load `references/visual-clarification.md`, `references/screenshot-evidence.md`, and `references/screenshot-privacy.md`.
 
 ### 4. Design Model
 
