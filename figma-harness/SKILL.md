@@ -181,6 +181,7 @@ Infer the design system from explicit components and repeated visual patterns:
 If component variants conflict, ask whether to normalize them into one canonical component, preserve them as separate variants, or treat one source as stale.
 
 For deeper component extraction heuristics, load `references/component-inference.md`.
+For token extraction and asset handling, load `references/token-extraction.md` and `references/asset-inventory.md`.
 
 Create conditional docs only when they add clarity:
 
@@ -232,6 +233,7 @@ For cross-platform work, ask which architecture is intended:
 - shared business logic with separate UI
 - design-system generation before screens
 
+For responsive decisions, accessibility mapping, and data/content behavior, load `references/responsive-decisions.md`, `references/accessibility-mapping.md`, and `references/data-content-mapping.md`.
 Before implementation, convert resolved scope into acceptance criteria. For templates, load `references/acceptance-criteria.md` and `references/risk-register.md`.
 
 ### 6. Implementation
