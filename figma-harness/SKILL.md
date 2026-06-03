@@ -181,6 +181,8 @@ Create conditional docs only when they add clarity:
 - `docs/figma-harness/flow-map.md`
 - `docs/figma-harness/design-to-code-assumptions.md`
 
+For reusable artifact shapes, load `references/artifact-templates.md`. For the canonical design model structure, load `references/design-model-schema.md`.
+
 ### 5. Implementation Plan
 
 Before code changes, state the plan in implementation order:
@@ -279,6 +281,8 @@ Write `docs/figma-harness/implementation-review.md` with:
 Fix material mismatches before final handoff unless blocked by missing design information, missing assets, unavailable tools, or explicit user scope limits.
 
 Functional QA does not replace visual fidelity QA. Passing lint, tests, or build is not enough if the rendered result visibly diverges from the canonical design.
+
+For review artifacts, load `references/visual-qa-ledger.md` and `references/review-rubric.md`. To forward-test whether another agent followed this harness, load `references/forward-test-checklist.md`.
 
 ## Whole-File Mode
 
