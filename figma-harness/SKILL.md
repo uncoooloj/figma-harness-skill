@@ -134,6 +134,7 @@ Ask structured questions:
 ```text
 Category:
 Decision:
+Visual evidence:
 Options:
 Recommended:
 Why it matters:
@@ -147,7 +148,7 @@ Update:
 
 Proceed only when blocking/high ambiguity is resolved, or when the user explicitly authorizes assumptions.
 
-For examples of good questions and safe assumptions, load `references/question-bank.md` and `references/assumption-policy.md`.
+For examples of good questions and safe assumptions, load `references/question-bank.md` and `references/assumption-policy.md`. When a question depends on a visual detail, return a screenshot, crop, or annotated callout when the platform can safely capture one; load `references/visual-clarification.md`, `references/screenshot-evidence.md`, and `references/screenshot-privacy.md`.
 
 ### 4. Design Model
 
@@ -191,6 +192,7 @@ Create conditional docs only when they add clarity:
 - `docs/figma-harness/design-to-code-assumptions.md`
 
 For reusable artifact shapes, load `references/artifact-templates.md`. For the canonical design model structure, load `references/design-model-schema.md`.
+For route, navigation, and state coverage, load `references/flow-routing.md` and `references/state-inventory.md`.
 
 ### 5. Implementation Plan
 
@@ -232,6 +234,7 @@ For cross-platform work, ask which architecture is intended:
 - design-system generation before screens
 
 For responsive decisions, accessibility mapping, and data/content behavior, load `references/responsive-decisions.md`, `references/accessibility-mapping.md`, and `references/data-content-mapping.md`.
+Before implementation, convert resolved scope into acceptance criteria. For templates, load `references/acceptance-criteria.md` and `references/risk-register.md`.
 
 ### 6. Implementation
 
@@ -326,5 +329,7 @@ Report:
 - material deviations or unresolved questions
 
 If implementation did not proceed because strict clarification found blocking ambiguity, lead with the exact questions needed to unblock the next step.
+
+For final handoffs or GitHub PR descriptions, load `references/handoff-template.md`.
 
 If the workflow derails, over-asks, under-asks, redesigns, or codes too early, load `references/troubleshooting.md`.
