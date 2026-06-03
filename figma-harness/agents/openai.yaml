@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Harness"
+  short_description: "Harness Figma-to-code execution"
+  default_prompt: "Use $figma-harness to turn these Figma links into production UI code."

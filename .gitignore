@@ -1,0 +1,15 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+tmp/
+.tmp/
+*.tmp
+*.log
