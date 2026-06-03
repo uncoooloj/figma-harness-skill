@@ -63,6 +63,8 @@ Identify:
 
 If Figma access is blocked, ask for access, screenshots, exports, or specific frames before pretending to inspect the design.
 
+For blocked or partial design access, load `references/no-figma-access.md`.
+
 ### 2. Source Inventory
 
 Create a source inventory before code changes.
@@ -142,6 +144,8 @@ Update:
 - `.tmp/figma-harness/ambiguities.json`
 
 Proceed only when blocking/high ambiguity is resolved, or when the user explicitly authorizes assumptions.
+
+For examples of good questions and safe assumptions, load `references/question-bank.md` and `references/assumption-policy.md`.
 
 ### 4. Design Model
 
@@ -299,6 +303,8 @@ When given an entire Figma file, do not treat the file as one implementation tar
 
 Then ask which groups or flows are canonical and in scope. Whole-file mode is an intake and source-of-truth mapping phase until the user confirms target surfaces.
 
+For a fuller whole-file intake process, load `references/whole-file-mode.md`.
+
 ## Final Response
 
 Report:
@@ -311,3 +317,5 @@ Report:
 - material deviations or unresolved questions
 
 If implementation did not proceed because strict clarification found blocking ambiguity, lead with the exact questions needed to unblock the next step.
+
+If the workflow derails, over-asks, under-asks, redesigns, or codes too early, load `references/troubleshooting.md`.
