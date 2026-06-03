@@ -28,6 +28,8 @@ Adapter examples:
 - Claude Code or other coding agents: paste or reference `SKILL.md` as the project instruction/harness; map Figma/browser/test operations to the platform's available tools.
 - Custom agent harnesses: implement the workflow states as gates in the orchestrator and persist the same docs/tmp artifacts.
 
+For detailed adapter guidance, load `references/platform-adapters.md` and `references/install-and-portability.md`. For starter prompts, load `references/example-scenarios.md`.
+
 ## Operating Mode
 
 Default to `strict_clarification`.
@@ -177,6 +179,8 @@ Infer the design system from explicit components and repeated visual patterns:
 
 If component variants conflict, ask whether to normalize them into one canonical component, preserve them as separate variants, or treat one source as stale.
 
+For deeper component extraction heuristics, load `references/component-inference.md`.
+
 Create conditional docs only when they add clarity:
 
 - `docs/figma-harness/component-inventory.md`
@@ -247,6 +251,8 @@ For large inputs, use parallel agents only when the harness and user permissions
 - Ambiguity Resolution
 - Implementation
 - Review
+
+For explicit role inputs, outputs, and write boundaries, load `references/multi-agent-contracts.md`.
 
 ### 7. Review Gate
 
